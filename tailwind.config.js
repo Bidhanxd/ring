@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}", // Note the addition of the `app` directory.
@@ -10,7 +12,13 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        chewy: ["var(--font-chewy)", ...fontFamily.sans],
+        andika: ["var(--font-andika)", ...fontFamily.sans],
+        oxygen: ["var(--font-oxygen)", ...fontFamily.sans],
+      },
+    },
   },
   plugins: [],
 };

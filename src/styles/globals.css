@@ -6,8 +6,6 @@ html {
   box-sizing: border-box;
 }
 
-@layer base {
-  body {
-    @apply bg-[#ecf0f3];
-  }
+body {
+  background-color: #ecf0f3;
 }
